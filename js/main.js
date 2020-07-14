@@ -10,7 +10,7 @@ password.addEventListener("keyup", function () {
   let pass = document.getElementById("password").value;
   checkStrength(pass);
 });
-
+//Muestra la contraseña, en el if state es true o false es un valor booleano
 function toggle() {
   if (state) {
     document.getElementById("password").setAttribute("type", "password");
@@ -20,11 +20,11 @@ function toggle() {
     state = true;
   }
 }
-
+//Muestra la contraseña al presionar el icono al igual que la funcion de arriba
 function myFunction(show) {
   show.classList.toggle("fa-eye-slash");
 }
-
+//Funcion para validar que tenga caracteres especiales, numeros y letras
 function checkStrength(password) {
   let strength = 0;
 
@@ -64,7 +64,6 @@ function checkStrength(password) {
     eightChar.classList.add("fa-circle");
     eightChar.classList.remove("fa-check");
   }
-
   // If value is less than 2
   if (strength < 2) {
     passwordStrength.classList.remove("progress-bar-warning");
