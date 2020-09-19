@@ -1,18 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-:root{
-  --backgroundColor: linear-gradient(to right top, #1e15a3, #2737b4, #3752c3, #4b6cd0, #6286db, #5e9ae7, #60adf0, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-
+:root {
+  --backgroundColor: linear-gradient(
+    to right top,
+    #1e15a3,
+    #2737b4,
+    #3752c3,
+    #4b6cd0,
+    #6286db,
+    #5e9ae7,
+    #60adf0,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
 body {
   font-family: "PT Sans", sans-serif;
-}
-.container {
-  background: var(--backgroundColor);
 }
 h1 {
   margin: 15px 0 25px;
   text-align: center;
   font-size: 30px;
+}
+img {
+  max-width: 100%;
 }
 input {
   color: #022255 !important;
@@ -24,11 +37,20 @@ input[type="text"]:focus {
   border: 1px solid rgba(246, 8, 110, 0.8);
 }
 .container {
-  width: 100%;
+  background: var(--backgroundColor);
+  width: 100vw;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
   justify-content: center;
-  align-items: center;
+}
+.image-container {
+  width: 200px;
+  height: 200px;
+}
+.image-container img {
+  width: inherit;
+  height: inherit;
 }
 .form-horizontal {
   width: 320px;
